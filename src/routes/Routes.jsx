@@ -8,7 +8,7 @@ export const RoutePaths = {
 
 const Routes = () => (
   <Switch>
-    <Route path={RoutePaths.HOME} component={HomePage} />
+    <Route exact path={RoutePaths.HOME} component={HomePage} />
     <Redirect to={RoutePaths.HOME} />
   </Switch>
 );
