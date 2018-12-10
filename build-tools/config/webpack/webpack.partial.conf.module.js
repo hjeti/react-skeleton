@@ -98,6 +98,7 @@ module.exports = ({ config, isDevelopment }) => webpackConfig => {
                   loader: 'awesome-typescript-loader',
                   options: {
                     configFileName: path.resolve(config.projectRoot, './tsconfig.json'),
+                    useCache: isDevelopment
                   },
                 },
               ],
