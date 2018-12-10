@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "allowJs": true,
+    "baseUrl": "./src/",
+    "lib": [
+      "DOM",
+      "ES7",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
+    "jsx": "react"
+  },
+  "include": [
+    "./src/**/*",
+    "node_modules/*"
+  ]
+}

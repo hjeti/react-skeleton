@@ -1,0 +1,4 @@
+build/**/*.js
+build-tools/**/*.js
+build-tools/**/*.jsx
+index.html

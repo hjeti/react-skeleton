@@ -1,0 +1,12 @@
+{
+	"destination": "./src/page",
+	"variables": [
+	  {
+  		"name": "functional",
+  		"type": "confirm",
+  		"message": "Do you want to create a functional component?",
+  		"isBoolean": true,
+  		"default": false
+  	}
+  ]
+}

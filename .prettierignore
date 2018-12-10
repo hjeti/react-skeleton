@@ -1,0 +1,4 @@
+src/vendor/**/*.js
+src/vendor/**/*.jsx
+src/vendor/**/*.ts
+src/vendor/**/*.tsx
