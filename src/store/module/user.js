@@ -30,6 +30,14 @@ export const setUser = createAction(SET_USER);
 export const setFirstName = createAction(SET_FIRST_NAME);
 export const setLastName = createAction(SET_LAST_NAME);
 
+// Thunks
+export const setUserWithDelay = (user, delay = 2000) => dispatch =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve(dispatch(setUser(user)));
+    }, delay);
+  });
+
 // Selectors
 export const getFullName = createSelector(
   state => state[namespace],
