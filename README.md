@@ -7,7 +7,7 @@
 `React skeleton` comes packaged with a variety of tools for creating a (multilingual) SPA. The 
 skeleton allows to get up and running in a matter of minutes.
 
-When built, the whole skeleton is only **~56kb** gzipped!
+When built, the whole skeleton is only **~77kb** gzipped!
 
 ## Features
 
@@ -23,6 +23,12 @@ When built, the whole skeleton is only **~56kb** gzipped!
 * [airbnb coding standard](https://github.com/airbnb/javascript) (integrated with es/ts-lint)
 * [modernizr](https://github.com/Modernizr/Modernizr)
 * [prettier](https://prettier.io/)
+* [redux](https://redux.js.org/)
+* [react-redux](https://react-redux.js.org/)
+* [redux-thunk](https://github.com/reduxjs/redux-thunk)
+* [redux-actions](https://redux-actions.js.org/)
+* [reselect](https://github.com/reduxjs/reselect)
+* [connected-react-router](https://github.com/supasate/connected-react-router)
 * [lint-staged](https://github.com/okonet/lint-staged)
 * [stylelint](https://github.com/stylelint/stylelint) + [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
 * versioning
@@ -32,7 +38,7 @@ When built, the whole skeleton is only **~56kb** gzipped!
 * [Image optimization](https://github.com/Klathmon/imagemin-webpack-plugin)
 
 ## TODO
-* Redux setup
+* Redux setup (almost done)
 * i18n
 * gateway setup
 * device state tracker
