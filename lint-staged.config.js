@@ -15,8 +15,8 @@ const tsSettings = config.lintStaged.tslintEnabled
   : [...defaultSettings];
 
 const scssSettings = config.lintStaged.stylelintEnabled
-  ? [...defaultSettings, scssLintCommand]
-  : [...defaultSettings];
+  ? [scssLintCommand]
+  : [];
 
 module.exports = {
   'src/**/*.{js,jsx}': jsSettings,
