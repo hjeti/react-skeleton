@@ -23,6 +23,7 @@ When built, the whole skeleton is only **~77kb** gzipped!
 * [airbnb coding standard](https://github.com/airbnb/javascript) (integrated with es/ts-lint)
 * [modernizr](https://github.com/Modernizr/Modernizr)
 * [prettier](https://prettier.io/)
+* [ducks](https://github.com/erikras/ducks-modular-redux)
 * [redux](https://redux.js.org/)
 * [react-redux](https://react-redux.js.org/)
 * [redux-thunk](https://github.com/reduxjs/redux-thunk)
