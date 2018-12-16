@@ -29,8 +29,10 @@
     "core-js": "^2.4.1",
     "detect-port": "^1.2.1",
     "fetch-polyfill": "^0.8.2",
+    "flux-standard-action": "^2.0.3",
     "gsap": "^2.0.1",
     "history": "^4.7.2",
+    "idx": "^2.5.2",
     "lodash": "^4.17.4",
     "mini-css-extract-plugin": "^0.4.0",
     "modernizr": "^3.3.1",
@@ -48,7 +50,8 @@
     "reselect": "^4.0.0",
     "seng-config": "^1.1.0",
     "seng-device-state-tracker": "^1.1.4",
-    "seng-scss": "^1.0.0"
+    "seng-scss": "^1.0.0",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
