@@ -1,4 +1,4 @@
-import { EnvironmentNames, VariableNames } from '../data/enum/configNames';
+import { EnvironmentNames, VariableNames, URLNames } from '../data/enum/configNames';
 
 const config = {
   environments: {
@@ -29,7 +29,9 @@ const config = {
       (window.webpackPublicPath || process.env.PUBLIC_PATH) + process.env.STATIC_ROOT,
     [VariableNames.PUBLIC_PATH]: window.webpackPublicPath || process.env.PUBLIC_PATH,
   },
-  urls: {},
+  urls: {
+    [URLNames.API]: `${process.env.PUBLIC_PATH}api/`,
+  },
   properties: {},
 };
 
