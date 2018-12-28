@@ -1,3 +1,5 @@
+import waitForStyleSheetsLoaded from '../util/waitForStyleSheetsLoaded';
+
 const initPlugins = () => {};
 
 const startUp = () => {
@@ -5,7 +7,9 @@ const startUp = () => {
   initPlugins();
 
   // Add async methods to the Promise.all array
-  return Promise.all([Promise.resolve()]);
+  return Promise.all([
+    process.env.NODE_ENV !== 'production' ? waitForStyleSheetsLoaded(document) : Promise.resolve(),
+  ]);
 };
 
 export default startUp;
