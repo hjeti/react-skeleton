@@ -39,7 +39,5 @@ When built, the whole skeleton is only **~77kb** gzipped!
 * [Image optimization](https://github.com/Klathmon/imagemin-webpack-plugin)
 
 ## TODO
-* Redux setup (almost done)
 * i18n
-* gateway setup
 * device state tracker
