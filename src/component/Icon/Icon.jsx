@@ -6,10 +6,7 @@ import styles from './Icon.module.scss';
 const svgContext = require.context('../../asset/svg/?inline', false, /\.svg/);
 
 const Icon = ({ name }) => (
-  <span
-    className={styles.container}
-    dangerouslySetInnerHTML={{ __html: svgContext(`./${name}.svg`) }}
-  />
+  <span className={styles.icon} dangerouslySetInnerHTML={{ __html: svgContext(`./${name}.svg`) }} />
 );
 
 Icon.propTypes = {
