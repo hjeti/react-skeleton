@@ -6,6 +6,7 @@ const {{name_pc}} = () => (
   <div className={styles.{{name_cc}} }>{{name_pc}}</div>
 );
 {{else}}
+// eslint-disable-next-line react/prefer-stateless-function
 class {{name_pc}} extends Component {
   render() {
     return <div className={styles.{{name_cc}} }>{{name_pc}}</div>;
