@@ -40,4 +40,3 @@ When built, the whole skeleton is only **~77kb** gzipped!
 
 ## TODO
 * i18n
-* device state tracker
