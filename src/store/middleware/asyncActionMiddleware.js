@@ -1,12 +1,7 @@
 import shortid from 'shortid';
+import { actionPayloadIsPromise, isAsyncAction } from '../../util/actionUtils';
 
-const actionPayloadIsPromise = action =>
-  action.payload && typeof action.payload.then === 'function';
-export const isAsyncAction = action => action.meta && action.meta.isAsync;
-export const isFulfilledAsyncAction = action => isAsyncAction(action) && action.meta.isFulfilled;
-export const isResolvedAsyncAction = action => isFulfilledAsyncAction(action) && !action.error;
-
-export const asyncAction = ({ dispatch }) => next => action => {
+const asyncAction = ({ dispatch }) => next => action => {
   if (actionPayloadIsPromise(action) && !isAsyncAction(action)) {
     const asyncId = shortid.generate();
     const asyncMeta = {
@@ -59,3 +54,5 @@ export const asyncAction = ({ dispatch }) => next => action => {
 
   return next(action);
 };
+
+export default asyncAction;

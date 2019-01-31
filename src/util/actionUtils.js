@@ -1,5 +1,13 @@
 import * as FSA from 'flux-standard-action';
-import { isFulfilledAsyncAction, isAsyncAction } from './asyncActionMiddleware';
+
+export const actionPayloadIsPromise = action =>
+  action.payload && typeof action.payload.then === 'function';
+
+export const isAsyncAction = action => action.meta && action.meta.isAsync;
+
+export const isFulfilledAsyncAction = action => isAsyncAction(action) && action.meta.isFulfilled;
+
+export const isResolvedAsyncAction = action => isFulfilledAsyncAction(action) && !action.error;
 
 export const isFSA = action => FSA.isFSA(action);
 
