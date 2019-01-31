@@ -12,12 +12,18 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build-tools/config/webpack/webpack.conf.dev.js",
     "build": "cross-env NODE_ENV=production node build-tools/script/build.js",
+    "lint": "npm-run-all lint:*",
     "lint:js": "eslint src --ext .js,.jsx --cache",
     "analyze": "npm run build -- --analyze",
     "lint:ts": "tslint \"src/**/*.{ts,tsx}\" -p tsconfig.json",
     "lint:scss": "stylelint \"./src/**/*.scss\" --cache",
+    "lint:prettier": "prettier \"src/**/*.{js,jsx,ts,tsx,scss}\" --list-different",
+    "fix": "npm-run-all fix:*",
+    "fix:scss": "npm run lint:scss -- --fix",
+    "fix:ts": "npm run lint:ts -- --fix",
+    "fix:js": "npm run lint:js -- --fix",
+    "fix:prettier": "prettier \"src/**/*.{js,jsx,ts,tsx,scss}\" --write",
     "preview": "node build-tools/script/preview-server.js",
-    "prettify": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "preinstall": "npx use-yarn"
   },
   "husky": {
@@ -41,6 +47,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "modernizr": "^3.3.1",
     "normalize.css": "^8.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss-safe-parser": "^4.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
