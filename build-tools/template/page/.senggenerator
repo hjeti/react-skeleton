@@ -6,7 +6,7 @@
   		"type": "confirm",
   		"message": "Do you want to create a functional component?",
   		"isBoolean": true,
-  		"default": false
+  		"default": true
   	}
   ]
 }
