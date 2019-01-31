@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions';
-import { getValue } from './injector';
+import { getValue } from '../../util/injector';
 
 /**
  * Simple wrapper action to execute a gateway request. Will dispatch an async action (action with
