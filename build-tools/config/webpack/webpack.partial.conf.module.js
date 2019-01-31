@@ -79,6 +79,7 @@ module.exports = ({ config, isDevelopment }) => webpackConfig => {
             loader: 'babel-loader',
             options: {
               cacheDirectory: isDevelopment,
+              configFile: path.join(config.projectRoot, './babel.config.js'),
             },
           };
 
