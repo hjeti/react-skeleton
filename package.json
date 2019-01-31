@@ -1,6 +1,10 @@
 {
   "name": "react-skeleton",
   "version": "0.0.1",
+  "skeleton": {
+    "name": "react-skeleton",
+    "version": "0.0.1"
+  },
   "description": "A React Skeleton",
   "author": "Hendrik-Jan de Harder <hendrik-jan@mediamonks.com>",
   "license": "MIT",
