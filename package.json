@@ -59,6 +59,7 @@
     "redux-devtools-extension": "^2.13.7",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "router-path": "^1.0.5",
     "seng-config": "^1.1.0",
     "seng-device-state-tracker": "^1.1.4",
     "seng-scss": "^1.0.0",
