@@ -108,7 +108,7 @@ module.exports = ({ config, isDevelopment }) => webpackConfig => {
         })(),
         /*
          * ------------------------------------------------
-         * Images and SVG
+         * Images, SVG, Audio and Video
          * ------------------------------------------------
          */
         {
@@ -121,6 +121,34 @@ module.exports = ({ config, isDevelopment }) => webpackConfig => {
                 name: path.posix.join(
                   isDevelopment ? '' : config.dist.versionPath,
                   'image/[name].[hash:7].[ext]',
+                ),
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(mp4|webm|ogv)(\?.*)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: path.posix.join(
+                  isDevelopment ? '' : config.dist.versionPath,
+                  'video/[name].[hash:7].[ext]',
+                ),
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(mp3|ogg|wav)(\?.*)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: path.posix.join(
+                  isDevelopment ? '' : config.dist.versionPath,
+                  'audio/[name].[hash:7].[ext]',
                 ),
               },
             },
