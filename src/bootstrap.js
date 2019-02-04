@@ -11,8 +11,9 @@ import setupInjects from './util/setupInjects';
 import App from './App';
 import createStore from './store/createStore';
 import { getValue } from './util/injector';
-import { DEVICE_STATE_TRACKER } from './data/Injectables';
+import { CONFIG_MANAGER, DEVICE_STATE_TRACKER } from './data/Injectables';
 import { setDeviceState } from './store/module/app';
+import { VariableNames } from './data/enum/configNames';
 
 setupInjects();
 
@@ -21,7 +22,12 @@ if (window.webpackPublicPath) {
   __webpack_public_path__ = window.webpackPublicPath;
 }
 
-const history = createBrowserHistory();
+const configManager = getValue(CONFIG_MANAGER);
+
+const history = createBrowserHistory({
+  basename: configManager.getVariable(VariableNames.PUBLIC_PATH),
+});
+
 const store = createStore(history);
 const deviceStateTracker = getValue(DEVICE_STATE_TRACKER);
 
