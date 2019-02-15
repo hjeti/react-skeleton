@@ -4,9 +4,10 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import createRootReducer from './modules';
 import asyncAction from './middleware/asyncActionMiddleware';
+import locale from './middleware/localeMiddleware';
 
 export default history => {
-  const middleware = [asyncAction, thunk];
+  const middleware = [asyncAction, thunk, locale];
 
   const store = createStore(
     createRootReducer(history),

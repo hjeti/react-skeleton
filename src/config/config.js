@@ -1,4 +1,4 @@
-import { EnvironmentNames, VariableNames, URLNames } from '../data/enum/configNames';
+import { EnvironmentNames, VariableNames, URLNames, PropertyNames } from '../data/enum/configNames';
 
 const config = {
   environments: {
@@ -23,6 +23,8 @@ const config = {
     },
   },
   variables: {
+    [VariableNames.LOCALE_ENABLED]: true,
+    [VariableNames.LOCALE_ROUTING_ENABLED]: true,
     [VariableNames.VERSIONED_STATIC_ROOT]:
       (window.webpackPublicPath || process.env.PUBLIC_PATH) + process.env.VERSIONED_STATIC_ROOT,
     [VariableNames.STATIC_ROOT]:
@@ -32,7 +34,10 @@ const config = {
   urls: {
     [URLNames.API]: `${process.env.PUBLIC_PATH}api/`,
   },
-  properties: {},
+  properties: {
+    [PropertyNames.LOCALES]: ['en'],
+    [PropertyNames.DEFAULT_LOCALE]: 'en',
+  },
 };
 
 let environment = EnvironmentNames.PRODUCTION;

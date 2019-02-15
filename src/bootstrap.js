@@ -38,6 +38,6 @@ deviceStateTracker.addEventListener(DeviceStateEvent.STATE_UPDATE, event =>
 store.dispatch(setDeviceState(deviceStateTracker.currentDeviceState.state));
 
 // Mount the app after startUp
-startUp().then(() => {
+startUp(store, history, configManager).then(() => {
   ReactDOM.render(<App store={store} history={history} />, document.getElementById('app'));
 });
