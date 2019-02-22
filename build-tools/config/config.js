@@ -44,6 +44,8 @@ const buildTypes = {
 module.exports = {
   buildTypes,
 
+  compileNodeModules: false, // use babel to compile js code in node_modules
+
   projectRoot: path.resolve(__dirname, '../../'),
 
   devServer: {
